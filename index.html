@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueTax Contabilidade Digital</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      background-color: #001f3f;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      color: #00aaff;
+    }
+    nav {
+      text-align: center;
+      background-color: #001830;
+      padding: 10px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #00aaff;
+      text-decoration: none;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .btn {
+      background-color: #00aaff;
+      color: #000;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    footer {
+      background-color: #001f3f;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+    }
+    .login {
+      max-width: 400px;
+      margin: auto;
+      background: #111;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .login input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #00aaff;
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      section {
+        padding: 20px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BlueTax Contabilidade Digital</h1>
+    <p>Transformando números em soluções</p>
+  </header>
+
+  <nav>
+    <a href="#home">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#login">Área do Cliente</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="home">
+    <h2>Bem-vindo à BlueTax</h2>
+    <p>Especialistas em contabilidade digital para pequenas e médias empresas.</p>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Somos uma equipe focada em soluções contábeis modernas, ágeis e seguras. Trabalhamos com ética, transparência e tecnologia para oferecer o melhor suporte aos nossos clientes.</p>
+  </section>
+
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <ul>
+      <li>Abertura de empresas</li>
+      <li>Contabilidade para MEI e Simples Nacional</li>
+      <li>Folha de pagamento</li>
+      <li>Imposto de Renda</li>
+      <li>Planejamento tributário</li>
+      <li>Consultoria contábil e fiscal</li>
+    </ul>
+  </section>
+
+  <section id="login">
+    <h2>Área do Cliente</h2>
+    <div class="login">
+      <form onsubmit="return validarLogin()">
+        <input type="text" placeholder="Usuário" id="usuario" required>
+        <input type="password" placeholder="Senha" id="senha" required>
+        <button type="submit" class="btn">Entrar</button>
+      </form>
+      <p id="mensagemLogin" style="color: red;"></p>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <p>📧 Email: cristhiansantos47@gmail.com</p>
+    <p>Telefone: (73) 99948-0873</p>
+    <a href="https://wa.me/5573999480873" target="_blank" class="btn">WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BlueTax Contabilidade Digital. Todos os direitos reservados.</p>
+  </footer>
+
+  <a href="https://wa.me/5573999480873" class="whatsapp-button" target="_blank">WhatsApp</a>
+
+  <script>
+    function validarLogin() {
+      const usuario = document.getElementById('usuario').value;
+      const senha = document.getElementById('senha').value;
+      const mensagem = document.getElementById('mensagemLogin');
+
+      if (usuario === "cliente" && senha === "1234") {
+        alert("Login bem-sucedido! Bem-vindo, " + usuario);
+        mensagem.textContent = "";
+        return false;
+      } else {
+        mensagem.textContent = "Usuário ou senha incorretos.";
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
